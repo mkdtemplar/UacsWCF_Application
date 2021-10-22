@@ -1,0 +1,17 @@
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\LoggerService.deps.json
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\LoggerService.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\ref\LoggerService.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\LoggerService.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\UniversityApplication.Services.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\UniversityApplication.Services.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\bin\Debug\net5.0\UniversityApplication.Data.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.csproj.AssemblyReference.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfoInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.AssemblyInfo.cs
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CoreCompileInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\ref\LoggerService.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\LoggerService\obj\Debug\net5.0\LoggerService.csproj.CopyComplete

@@ -1,0 +1,15 @@
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\UniversityApplication.Services.deps.json
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\UniversityApplication.Services.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\ref\UniversityApplication.Services.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\UniversityApplication.Services.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\bin\Debug\net5.0\UniversityApplication.Data.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.csproj.AssemblyReference.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.AssemblyInfoInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.AssemblyInfo.cs
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.csproj.CoreCompileInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\ref\UniversityApplication.Services.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Services\obj\Debug\net5.0\UniversityApplication.Services.csproj.CopyComplete

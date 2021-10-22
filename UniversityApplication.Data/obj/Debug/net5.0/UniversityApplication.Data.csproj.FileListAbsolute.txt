@@ -1,0 +1,15 @@
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\UniversityApplication.Data.deps.json
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\UniversityApplication.Data.runtimeconfig.json
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\UniversityApplication.Data.runtimeconfig.dev.json
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\ref\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\bin\Debug\net5.0\UniversityApplication.Data.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.GeneratedMSBuildEditorConfig.editorconfig
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.AssemblyInfoInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.AssemblyInfo.cs
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.csproj.CoreCompileInputs.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\ref\UniversityApplication.Data.dll
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.pdb
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.genruntimeconfig.cache
+D:\C#\ASP_NET_CORE_WEB_API\UacsWCF_Application\UniversityApplication.Data\obj\Debug\net5.0\UniversityApplication.Data.csproj.AssemblyReference.cache
