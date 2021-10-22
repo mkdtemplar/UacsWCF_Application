@@ -72,7 +72,7 @@ namespace UniversityApplication.WebAPI.Controllers
         }
 
         [HttpPost]
-        public IActionResult CreateStudent([FromBody] StudentForCreationDto student)
+        public IActionResult CreateNewStudent([FromBody] StudentForCreationDto student)
         {
             if (student == null)
             {
@@ -86,7 +86,7 @@ namespace UniversityApplication.WebAPI.Controllers
 
             var studentToReturn = _mapper.Map<StudentDTO>(studentEntity);
 
-            return CreatedAtRoute("StudentById", new { id = studentToReturn.Id }, studentToReturn);
+            return CreatedAtRoute("StudentById", new { studentid = studentToReturn.id }, studentToReturn);
         }
     }
 }

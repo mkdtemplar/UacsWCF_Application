@@ -8,8 +8,20 @@ namespace UniversityApplication.Data.DataTransferObjects
 {
     public class StudentDTO
     {
-        public int Id { get; set; }
+        public int id { get; set; }
+        
+        public DateTime? EnrollmentDate { get; set; }
+
+        public DateTime? DOB { get; set; }
+
+        public string Mail { get; set; }
+
+        public string StudentIndex { get; set; }
+
+        public decimal? GPA { get; set; }
+
+        public int AddressId { get; set; }
         public string FullName { get; set; }
-        public string FullAddress { get; set; }
+        
     }
 }

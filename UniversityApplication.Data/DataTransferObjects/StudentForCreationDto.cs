@@ -14,15 +14,13 @@ namespace UniversityApplication.Data.DataTransferObjects
 
         public string LastName { get; set; }
 
-        public DateTime? EnrollmentDate { get; set; }
-
-        public DateTime? DOB { get; set; }
+       
 
         public string Mail { get; set; }
 
         public string StudentIndex { get; set; }
 
-        public decimal? GPA { get; set; }
+      
 
         public int AddressId { get; set; }
     }
