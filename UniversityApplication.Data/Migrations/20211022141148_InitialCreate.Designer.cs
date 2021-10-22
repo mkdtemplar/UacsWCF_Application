@@ -10,7 +10,7 @@ using UniversityApplication.Data;
 namespace UniversityApplication.Data.Migrations
 {
     [DbContext(typeof(UniversityDataContext))]
-    [Migration("20211021141324_InitialCreate")]
+    [Migration("20211022141148_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,21 @@ namespace UniversityApplication.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AddressStudent", b =>
+                {
+                    b.Property<int>("AddressId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AddressId", "StudentsId");
+
+                    b.HasIndex("StudentsId");
+
+                    b.ToTable("AddressStudent");
+                });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Address", b =>
                 {
@@ -68,7 +83,7 @@ namespace UniversityApplication.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Exam");
+                    b.ToTable("Exams");
                 });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Student", b =>
@@ -114,8 +129,6 @@ namespace UniversityApplication.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
-
                     b.ToTable("Students");
                 });
 
@@ -147,15 +160,19 @@ namespace UniversityApplication.Data.Migrations
                     b.ToTable("Transcripts");
                 });
 
-            modelBuilder.Entity("UniversityApplication.Data.Models.Student", b =>
+            modelBuilder.Entity("AddressStudent", b =>
                 {
-                    b.HasOne("UniversityApplication.Data.Models.Address", "Address")
-                        .WithMany("Students")
+                    b.HasOne("UniversityApplication.Data.Models.Address", null)
+                        .WithMany()
                         .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
+                    b.HasOne("UniversityApplication.Data.Models.Student", null)
+                        .WithMany()
+                        .HasForeignKey("StudentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Transcript", b =>
@@ -175,11 +192,6 @@ namespace UniversityApplication.Data.Migrations
                     b.Navigation("Exam");
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("UniversityApplication.Data.Models.Address", b =>
-                {
-                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Exam", b =>

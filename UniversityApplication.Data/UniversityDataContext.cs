@@ -22,6 +22,7 @@ namespace UniversityApplication.Data
         
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            
             modelBuilder.ApplyConfiguration(new StudentConfiguration());
             modelBuilder.ApplyConfiguration(new AddressConfiguration());
             modelBuilder.ApplyConfiguration(new ExamConfiguration());

@@ -23,7 +23,7 @@ namespace UniversityApplication.Data.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Exam",
+                name: "Exams",
                 columns: table => new
                 {
                     ExamId = table.Column<int>(type: "int", nullable: false)
@@ -34,7 +34,7 @@ namespace UniversityApplication.Data.Migrations
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Exam", x => x.ExamId);
+                    table.PrimaryKey("PK_Exams", x => x.ExamId);
                 });
 
             migrationBuilder.CreateTable(
@@ -55,11 +55,29 @@ namespace UniversityApplication.Data.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Students", x => x.StudentId);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "AddressStudent",
+                columns: table => new
+                {
+                    AddressId = table.Column<int>(type: "int", nullable: false),
+                    StudentsId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_AddressStudent", x => new { x.AddressId, x.StudentsId });
                     table.ForeignKey(
-                        name: "FK_Students_Addresses_AddressId",
+                        name: "FK_AddressStudent_Addresses_AddressId",
                         column: x => x.AddressId,
                         principalTable: "Addresses",
                         principalColumn: "AddressId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_AddressStudent_Students_StudentsId",
+                        column: x => x.StudentsId,
+                        principalTable: "Students",
+                        principalColumn: "StudentId",
                         onDelete: ReferentialAction.Cascade);
                 });
 
@@ -77,9 +95,9 @@ namespace UniversityApplication.Data.Migrations
                 {
                     table.PrimaryKey("PK_Transcripts", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Transcripts_Exam_ExamId",
+                        name: "FK_Transcripts_Exams_ExamId",
                         column: x => x.ExamId,
-                        principalTable: "Exam",
+                        principalTable: "Exams",
                         principalColumn: "ExamId",
                         onDelete: ReferentialAction.Cascade);
                     table.ForeignKey(
@@ -91,9 +109,9 @@ namespace UniversityApplication.Data.Migrations
                 });
 
             migrationBuilder.CreateIndex(
-                name: "IX_Students_AddressId",
-                table: "Students",
-                column: "AddressId");
+                name: "IX_AddressStudent_StudentsId",
+                table: "AddressStudent",
+                column: "StudentsId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Transcripts_ExamId",
@@ -109,16 +127,19 @@ namespace UniversityApplication.Data.Migrations
         protected override void Down(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.DropTable(
+                name: "AddressStudent");
+
+            migrationBuilder.DropTable(
                 name: "Transcripts");
 
             migrationBuilder.DropTable(
-                name: "Exam");
+                name: "Addresses");
+
+            migrationBuilder.DropTable(
+                name: "Exams");
 
             migrationBuilder.DropTable(
                 name: "Students");
-
-            migrationBuilder.DropTable(
-                name: "Addresses");
         }
     }
 }

@@ -10,7 +10,7 @@ using UniversityApplication.Data;
 namespace UniversityApplication.Data.Migrations
 {
     [DbContext(typeof(UniversityDataContext))]
-    [Migration("20211021141540_InitialData")]
+    [Migration("20211022141258_InitialData")]
     partial class InitialData
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -20,6 +20,21 @@ namespace UniversityApplication.Data.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("ProductVersion", "5.0.11")
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+            modelBuilder.Entity("AddressStudent", b =>
+                {
+                    b.Property<int>("AddressId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("StudentsId")
+                        .HasColumnType("int");
+
+                    b.HasKey("AddressId", "StudentsId");
+
+                    b.HasIndex("StudentsId");
+
+                    b.ToTable("AddressStudent");
+                });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Address", b =>
                 {
@@ -105,7 +120,7 @@ namespace UniversityApplication.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.ToTable("Exam");
+                    b.ToTable("Exams");
 
                     b.HasData(
                         new
@@ -195,8 +210,6 @@ namespace UniversityApplication.Data.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("AddressId");
-
                     b.ToTable("Students");
 
                     b.HasData(
@@ -204,7 +217,7 @@ namespace UniversityApplication.Data.Migrations
                         {
                             Id = 1,
                             AddressId = 2,
-                            EnrollmentDate = new DateTime(2018, 10, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EnrollmentDate = new DateTime(2018, 10, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             FirstName = "Kassidy",
                             LastName = "Trueman",
                             Mail = "Kassidy.Trueman@mail.com",
@@ -214,7 +227,7 @@ namespace UniversityApplication.Data.Migrations
                         {
                             Id = 2,
                             AddressId = 5,
-                            EnrollmentDate = new DateTime(2017, 10, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EnrollmentDate = new DateTime(2017, 10, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             FirstName = "Christobel",
                             LastName = "Bezuidenhout",
                             Mail = "Christobel.Bezuidenhout@mail.com",
@@ -224,7 +237,7 @@ namespace UniversityApplication.Data.Migrations
                         {
                             Id = 3,
                             AddressId = 1,
-                            EnrollmentDate = new DateTime(2019, 10, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EnrollmentDate = new DateTime(2019, 10, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             FirstName = "Kristel",
                             LastName = "Madison",
                             Mail = "Kristel.Madison@mail.com",
@@ -234,7 +247,7 @@ namespace UniversityApplication.Data.Migrations
                         {
                             Id = 4,
                             AddressId = 3,
-                            EnrollmentDate = new DateTime(2020, 10, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EnrollmentDate = new DateTime(2020, 10, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             FirstName = "Lyndsey",
                             LastName = "Albers",
                             Mail = "Lyndsey.Albers@mail.com",
@@ -244,7 +257,7 @@ namespace UniversityApplication.Data.Migrations
                         {
                             Id = 5,
                             AddressId = 4,
-                            EnrollmentDate = new DateTime(2018, 10, 21, 0, 0, 0, 0, DateTimeKind.Local),
+                            EnrollmentDate = new DateTime(2018, 10, 22, 0, 0, 0, 0, DateTimeKind.Local),
                             FirstName = "Alishia",
                             LastName = "Gabriels",
                             Mail = "Alishia.Gabriels@mail.com",
@@ -429,15 +442,19 @@ namespace UniversityApplication.Data.Migrations
                         });
                 });
 
-            modelBuilder.Entity("UniversityApplication.Data.Models.Student", b =>
+            modelBuilder.Entity("AddressStudent", b =>
                 {
-                    b.HasOne("UniversityApplication.Data.Models.Address", "Address")
-                        .WithMany("Students")
+                    b.HasOne("UniversityApplication.Data.Models.Address", null)
+                        .WithMany()
                         .HasForeignKey("AddressId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Address");
+                    b.HasOne("UniversityApplication.Data.Models.Student", null)
+                        .WithMany()
+                        .HasForeignKey("StudentsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Transcript", b =>
@@ -457,11 +474,6 @@ namespace UniversityApplication.Data.Migrations
                     b.Navigation("Exam");
 
                     b.Navigation("Student");
-                });
-
-            modelBuilder.Entity("UniversityApplication.Data.Models.Address", b =>
-                {
-                    b.Navigation("Students");
                 });
 
             modelBuilder.Entity("UniversityApplication.Data.Models.Exam", b =>
