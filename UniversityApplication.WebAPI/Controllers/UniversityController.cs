@@ -37,6 +37,23 @@ namespace UniversityApplication.WebAPI.Controllers
             return Ok(studentsDTO);
         }
 
+        [HttpGet("{studentid}")]
+        public IActionResult GetStudentById(int studentid)
+        {
+            var student = _repositoryManager.Student.GetStudent(studentid, trackChanges: false);
+            if (student == null)
+            {
+                _logger.LogInfo($"Student with id: {studentid} not exist.");
+                return NotFound();
+            }
+
+            else
+            {
+                var studentDto = _mapper.Map<StudentDTO>(student);
+                return Ok(studentDto);
+            }
+        }
+
         [HttpGet("{studentid},{addressId}")]
         public IActionResult GetStudent(int studentid, int addressId)
         {
