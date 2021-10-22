@@ -37,7 +37,7 @@ namespace UniversityApplication.WebAPI.Controllers
             return Ok(studentsDTO);
         }
 
-        [HttpGet("{studentid}")]
+        [HttpGet("{studentid}", Name = "StudentById")]
         public IActionResult GetStudentById(int studentid)
         {
             var student = _repositoryManager.Student.GetStudent(studentid, trackChanges: false);
