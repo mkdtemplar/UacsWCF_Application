@@ -8,6 +8,7 @@ using AutoMapper;
 using Microsoft.EntityFrameworkCore;
 using UniversityApplication.Data;
 using UniversityApplication.Data.DataTransferObjects;
+using UniversityApplication.Data.Models;
 using UniversityApplication.Services;
 
 namespace UniversityApplication.WebAPI.Controllers
@@ -68,6 +69,24 @@ namespace UniversityApplication.WebAPI.Controllers
                 var studentDTO = _mapper.Map<StudentDTO>(student);
                 return Ok(studentDTO);
             }
+        }
+
+        [HttpPost]
+        public IActionResult CreateStudent([FromBody] StudentForCreationDto student)
+        {
+            if (student == null)
+            {
+                _logger.LogError("Object sent from client is null.");
+                return BadRequest("Object sent from client is null.");
+            }
+
+            var studentEntity = _mapper.Map<Student>(student);
+            _repositoryManager.Student.CreateStudent(studentEntity);
+            _repositoryManager.Save();
+
+            var studentToReturn = _mapper.Map<StudentDTO>(studentEntity);
+
+            return CreatedAtRoute("StudentById", new { id = studentToReturn.Id }, studentToReturn);
         }
     }
 }

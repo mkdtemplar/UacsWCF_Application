@@ -13,6 +13,7 @@ namespace UniversityApplication.Services
         Student GetStudent(int studentId, bool trackChanges);
 
         Student GetStudentByAddress(int studentId,int addressId, bool trackChanges);
-        
+
+        void CreateStudent(Student student);
     }
 }

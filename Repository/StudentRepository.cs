@@ -25,6 +25,6 @@ namespace Repository
         public Student GetStudentByAddress(int studentId, int addressId, bool trackChanges) =>
             FindByCondition(s => s.Id.Equals(studentId) && s.AddressId.Equals(addressId), trackChanges).SingleOrDefault();
 
-        
+        public void CreateStudent(Student student) => Create(student);
     }
 }

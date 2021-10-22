@@ -16,6 +16,8 @@ namespace UniversityApplication.WebAPI
                 opt => opt.MapFrom(x => string.Join(' ', x.FirstName, x.LastName)));
 
             CreateMap<Address, AddressDTO>();
+
+            CreateMap<StudentForCreationDto, Student>();
         }
     }
 }
